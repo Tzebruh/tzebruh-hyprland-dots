@@ -30,9 +30,10 @@
         //"sway/language",
         "battery",
         //"battery#bat2",
-        "clock"//,
+        "clock",
         //"tray"//,
         //"custom/power"
+	"custom/logout"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -216,5 +217,10 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/logout": {
+        "format": "󰍃",
+	"tooltip-format": "Log out",
+        "on-click": "hyprctl dispatch exit"
     }
 }
