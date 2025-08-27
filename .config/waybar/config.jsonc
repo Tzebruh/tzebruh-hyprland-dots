@@ -33,6 +33,7 @@
         "clock",
         //"tray"//,
         //"custom/power"
+	"custom/lock",
 	"custom/logout"
     ],
     // Modules configuration
@@ -218,6 +219,11 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/lock": {
+        "format": "",
+	"tooltip-format": "Lock",
+	"on-click": "hyprlock"
     },
     "custom/logout": {
         "format": "󰍃",
