@@ -228,6 +228,6 @@
     "custom/logout": {
         "format": "󰍃",
 	"tooltip-format": "Log out",
-        "on-click": "hyprctl dispatch exit"
+        "on-click": "hyprctl dispatch 'hl.dsp.exit()'"
     }
 }
