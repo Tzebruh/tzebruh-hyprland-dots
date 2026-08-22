@@ -313,7 +313,7 @@ local mainMod = "SUPER"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
 
-hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd("foot"))
+hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd Font Mono:size=16"'))
 
 hl.bind(mainMod .. " + " .. "C", hl.dsp.window.close())
 
