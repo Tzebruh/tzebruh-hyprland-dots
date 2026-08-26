@@ -332,6 +332,8 @@ hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 -- dwindle
 
 -- bind = $mainMod, J, togglesplit, # dwindle
+hl.bind(mainMod .. " + " .. "J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + " .. "K", hl.dsp.layout("swapsplit"))
 
 --mine
 
@@ -350,6 +352,16 @@ hl.bind(mainMod .. " + " .. "right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + " .. "up", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
+
+-- Move the windows with mainMod + shift + arrow keys
+
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.window.move({ direction = "left" }))
+
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "right", hl.dsp.window.move({ direction = "right" }))
+
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "up", hl.dsp.window.move({ direction = "up" }))
+
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "down", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 
