@@ -485,7 +485,7 @@ hl.config({
 
 -- Autostart
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar & hyprpaper & dunst & systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("waybar & hyprpaper & dunst & /usr/lib/polkit-kde-authentication-agent-1 &")
 end)
 
 -- Exec (run every reload)
