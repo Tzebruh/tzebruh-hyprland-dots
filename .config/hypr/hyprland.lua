@@ -323,7 +323,9 @@ hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images"))
+hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program'"))
+
+hl.bind(mainMod .. " + " .. "ESCAPE", hl.dsp.exec_cmd("~/.local/bin/tze-power-menu"))
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 

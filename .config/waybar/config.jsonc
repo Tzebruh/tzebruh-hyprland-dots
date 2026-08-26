@@ -34,7 +34,8 @@
         //"tray"//,
         //"custom/power"
 	"custom/lock",
-	"custom/logout"
+	"custom/logout",
+	"custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -208,7 +209,7 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/power": {
+    /*"custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
@@ -219,7 +220,7 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
-    },
+    },*/
     "custom/lock": {
         "format": "",
 	"tooltip-format": "Lock",
@@ -229,5 +230,10 @@
         "format": "󰍃",
 	"tooltip-format": "Log out",
         "on-click": "hyprctl dispatch 'hl.dsp.exit()'"
+    },
+    "custom/power": {
+	"format": "󰐥",
+	"tooltip-format": "Power Menu",
+	"on-click": "~/.local/bin/tze-power-menu"
     }
 }
