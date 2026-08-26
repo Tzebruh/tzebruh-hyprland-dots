@@ -177,7 +177,7 @@
         "format-linked": "{ifname} (No IP) 󰌷",
         "format-disconnected": "Disconnected ⚠",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-	"on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"[float; stay_focused] foot -c bash nmtui\")'"
+	"on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"[float; stay_focused; dim_around; pin] foot -c bash nmtui\")'"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
