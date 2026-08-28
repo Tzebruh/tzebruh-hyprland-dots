@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BAT_PATH=$(find /sys/class/power_supply/BAT* 2> /dev/null | head -n 1)
+
+if [ ! -d "$BAT_PATH" ] || [ ! -f "$BAT_PATH/capacity" ] || [ ! -f "$BAT_PATH/status" ]; then
+	exit 0
+fi
+
+CAPACITY=$(cat "$BAT_PATH/capacity")
+STATUS=$(cat "$BAT_PATH/status")
+
+echo "$CAPACITY% ($STATUS)"
