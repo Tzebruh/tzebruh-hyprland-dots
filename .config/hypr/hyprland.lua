@@ -505,6 +505,13 @@ hl.layer_rule({
     animation = "popin 70%"
 })
 
+hl.layer_rule({
+    match = {
+	namespace = "waybar"
+    },
+    blur = true
+})
+
 --###########
 
 --## MINE ###
