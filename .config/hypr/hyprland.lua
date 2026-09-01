@@ -321,6 +321,8 @@ hl.bind(mainMod .. " + " .. "M", hl.dsp.exit())
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
+hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("xdg-open \"http://\""))
+
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program'"))
