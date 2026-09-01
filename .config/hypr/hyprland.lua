@@ -485,6 +485,24 @@ hl.window_rule({
     -- TODO: review rule: "no_focus 1"
 })
 
+hl.layer_rule({
+    match = {
+	namespace = "notifications"
+    },
+    blur = true,
+    above_lock = 1,
+    animation = "slide right"
+})
+
+hl.layer_rule({
+    match = {
+	namespace = "wofi"
+    },
+    blur = true,
+    dim_around = true,
+    animation = "popin 70%"
+})
+
 --###########
 
 --## MINE ###
