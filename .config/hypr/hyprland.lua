@@ -468,23 +468,23 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- Ignore maximize requests from apps. You'll probably like this.
 
 hl.window_rule({
-    name  = "match_class__",
+    name  = "suppress_maximize",
     match = {
-        class = "suppress_event maximize",
+        class = ".*",
     },
-    -- TODO: review rule: "match:class.*"
+    suppress_event = "maximize"
 })
 
 -- Fix some dragging issues with XWayland
 
 hl.window_rule({
-    name  = "no_focus_1",
+    name  = "xwayland_drag_fix",
     match = {
         class = "^$",
         title = "^$",
         xwayland = 1,
     },
-    -- TODO: review rule: "no_focus 1"
+    no_focus = true
 })
 
 hl.layer_rule({
