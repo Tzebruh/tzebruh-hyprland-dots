@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VOLRAW=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+
+VOLUME=$(echo "$VOLRAW" | awk '{print int($2 * 100)}')
+
+if echo "$VOLRAW" | grep -q "[MUTED]"; then
+	dunstify -r 2593 -t 2000 "Volume muted"
+else
+	dunstify -r 2593 -t 2000 -h int:value:$VOLUME "Volume changed" "$VOLUME%"
+fi

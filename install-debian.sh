@@ -14,8 +14,7 @@ sudo apt install wofi foot nautilus dunst fonts-font-awesome pavucontrol xdg-des
 
 # Configure
 cp -a ./.config/. ~/.config/
-cp ./tze-power-menu ~/.local/bin/tze-power-menu
-cp ./tze-battery-status ~/.local/bin/tze-battery-status
+cp -a ./.local/bin/. ~/.local/bin/
 cp ./foot-debian.ini ~/.config/foot/foot.ini
 sudo ln -s /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 /usr/lib/polkit-kde-authentication-agent-1
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
