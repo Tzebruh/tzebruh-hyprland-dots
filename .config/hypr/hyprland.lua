@@ -317,7 +317,7 @@ hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd
 
 hl.bind(mainMod .. " + " .. "C", hl.dsp.window.close())
 
-hl.bind(mainMod .. " + " .. "M", hl.dsp.exit())
+hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("hyprshutdown -t 'Logging out...'"))
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
@@ -508,6 +508,13 @@ hl.layer_rule({
 hl.layer_rule({
     match = {
 	namespace = "waybar"
+    },
+    blur = true
+})
+
+hl.layer_rule({
+    match = {
+	namespace = "hyprshutdown"
     },
     blur = true
 })

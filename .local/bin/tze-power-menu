@@ -12,11 +12,11 @@ case "$CHOICE" in
     "$LOCK")
         hyprlock ;;
     "$LOGOUT")
-	hyprctl dispatch "hl.dsp.exit()" ;;
+	hyprshutdown -t 'Logging out...' ;;
     "$SUSPEND")
         systemctl suspend ;;
     "$REBOOT")
-        systemctl reboot ;;
+        hyprshutdown -t 'Rebooting...' -p 'systemctl reboot' ;;
     "$SHUTDOWN")
-        systemctl poweroff ;;
+        hyprshutdown -t 'Powering off...' -p 'systemctl poweroff' ;;
 esac

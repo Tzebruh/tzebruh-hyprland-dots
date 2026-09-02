@@ -5,7 +5,7 @@ sudo cp trixie-backports.list /etc/apt/sources.list.d/trixie-backports.list
 sudo apt update
 
 # Install backported packages
-sudo apt install -t trixie-backports hyprland hyprpaper hyprlock waybar xdg-desktop-portal-hyprland pipewire pipewire-pulse hyprland-guiutils
+sudo apt install -t trixie-backports hyprland hyprpaper hyprlock waybar xdg-desktop-portal-hyprland pipewire pipewire-pulse hyprland-guiutils hyprshutdown
 
 # Install normal packages
 sudo apt install wofi foot nautilus dunst fonts-font-awesome pavucontrol xdg-desktop-portal-gtk gnome-themes-extra qt6ct polkit-kde-agent-1 brightnessctl wl-clipboard
