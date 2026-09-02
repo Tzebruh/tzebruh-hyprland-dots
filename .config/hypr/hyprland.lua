@@ -325,7 +325,7 @@ hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("xdg-open \"http://\""))
 
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program'"))
+hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program' --insensitive"))
 
 hl.bind(mainMod .. " + " .. "ESCAPE", hl.dsp.exec_cmd("~/.local/bin/tze-power-menu"))
 

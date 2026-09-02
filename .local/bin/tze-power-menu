@@ -6,7 +6,7 @@ SUSPEND="󰤄 Suspend"
 REBOOT="󰜉 Reboot"
 SHUTDOWN="󰐥 Power Off"
 
-CHOICE=$(printf "%s\n%s\n%s\n%s\n%s" "$LOCK" "$LOGOUT" "$SUSPEND" "$REBOOT" "$SHUTDOWN" | wofi --dmenu --prompt "Power Menu" --width 300 --height 300)
+CHOICE=$(printf "%s\n%s\n%s\n%s\n%s" "$LOCK" "$LOGOUT" "$SUSPEND" "$REBOOT" "$SHUTDOWN" | wofi --dmenu --prompt "Power Menu" --width 300 --height 300 --insensitive)
 
 case "$CHOICE" in
     "$LOCK")
