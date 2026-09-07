@@ -214,6 +214,7 @@ hl.animation({ leaf = "fadeLayersOut",  enabled = true, speed = 1.39, bezier = "
 hl.animation({ leaf = "workspaces",     enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesIn",   enabled = true, speed = 4,    bezier = "easeOutQuint" })
 hl.animation({ leaf = "workspacesOut",  enabled = true, speed = 4,    bezier = "easeOutQuint" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 4, bezier = "easeOutQuint", style = "slidevert" })
 
 -- Ref https://wiki.hypr.land/Configuring/Workspace-Rules/
 
