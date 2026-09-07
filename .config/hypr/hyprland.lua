@@ -341,7 +341,7 @@ hl.bind(mainMod .. " + " .. "K", hl.dsp.layout("swapsplit"))
 
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
 
-hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -z -m region --clipboard-only"))
 
 hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 
