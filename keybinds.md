@@ -31,6 +31,7 @@
 - SUPER+Shift+S: Send window to special workspace
 
 ## Shell
+- PrtScn: Take screenshot
 - SUPER+L: Lock
 - SUPER+Esc: Power menu
 - SUPER+F1: Toggle power saver
