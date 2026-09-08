@@ -318,7 +318,7 @@ hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd
 
 hl.bind(mainMod .. " + " .. "C", hl.dsp.window.close())
 
-hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("hyprshutdown -t 'Logging out...'"))
+-- hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("hyprshutdown -t 'Logging out...'"))
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 

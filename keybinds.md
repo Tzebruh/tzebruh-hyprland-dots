@@ -31,5 +31,4 @@
 
 ## Shell
 - SUPER+L: Lock
-- SUPER+M: Log out
 - SUPER+Esc: Power menu
