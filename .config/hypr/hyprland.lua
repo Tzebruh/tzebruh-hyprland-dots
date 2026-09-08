@@ -592,5 +592,5 @@ end)
 
 -- Exec (run every reload)
 hl.on("config.reloaded", function()
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\" & gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita-dark\"")
+    hl.exec_cmd('gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" & gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" & powerprofilesctl set performance')
 end)
