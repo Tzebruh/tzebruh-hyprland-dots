@@ -346,6 +346,21 @@ hl.bind("Print", hl.dsp.exec_cmd("hyprshot -z -m region --clipboard-only"))
 
 hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 
+local next_layout = {
+    ["dwindle"] = "master",
+    ["master"] = "scrolling",
+    ["scrolling"] = "dwindle"
+}
+hl.bind(mainMod .. " + " .. "tab", function()
+    local ws = hl.get_active_workspace()
+    local new_layout = next_layout[ws.tiled_layout]
+    hl.workspace_rule({
+	workspace = tostring(ws.id),
+	layout = new_layout
+    })
+    hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2595 -t 2000 "Layout changed" "Workspace ' .. ws.id .. ' layout set to ' .. new_layout .. '"'))
+end)
+
 -- Move focus with mainMod + arrow keys
 
 hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))

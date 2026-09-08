@@ -25,6 +25,7 @@
 - SUPER+Numbers: Change workspace
 - SUPER+Shift+Numbers: Move focused window to workspace
 - SUPER+Scroll: Scroll through workspaces
+- SUPER+Tab: Change workspace layout
 ### Special
 - SUPER+S: Toggle special workspace
 - SUPER+Shift+S: Send window to special workspace
