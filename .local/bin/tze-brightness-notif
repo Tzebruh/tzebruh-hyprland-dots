@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BRIGHTNESS=$(brightnessctl g)
+MBRIGHTNESS=$(brightnessctl m)
+
+PERCENT=$(echo "$BRIGHTNESS / ($MBRIGHTNESS / 100)" | bc)
+
+dunstify -r 2594 -t 2000 -h int:value:$PERCENT "Brightness changed" "$PERCENT%"
