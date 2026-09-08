@@ -33,8 +33,6 @@
         "clock",
         //"tray"//,
         //"custom/power"
-	"custom/lock",
-	"custom/logout",
 	"custom/power"
     ],
     // Modules configuration
@@ -222,16 +220,6 @@
 			"hibernate": "systemctl hibernate"
 		}
     },*/
-    "custom/lock": {
-        "format": "",
-	"tooltip-format": "Lock",
-	"on-click": "hyprlock"
-    },
-    "custom/logout": {
-        "format": "󰍃",
-	"tooltip-format": "Log out",
-        "on-click": "hyprshutdown -t 'Logging out...'"
-    },
     "custom/power": {
 	"format": "󰐥",
 	"tooltip-format": "Power Menu",
