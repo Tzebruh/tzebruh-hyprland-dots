@@ -369,6 +369,36 @@ hl.bind(mainMod .. " + " .. "tab", function()
     hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2595 -t 2000 "Layout changed" "Workspace ' .. ws.id .. ' layout set to ' .. new_layout .. '"'))
 end)
 
+hl.bind(mainMod .. " + " .. "F1", function()
+    local power_saver = (hl.get_config("animations.enabled") == false)
+
+    if power_saver then
+	hl.config({
+	    animations = { enabled = true },
+	    decoration = {
+		shadow = { enabled = true },
+		blur = { enabled = true }
+	    }
+	})
+
+	hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set performance"))
+
+        hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver disabled"'))
+    else
+	hl.config({
+	    animations = { enabled = false },
+	    decoration = {
+		shadow = { enabled = false },
+		blur = { enabled = false }
+	    }
+	})
+
+	hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set power-saver"))
+
+        hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver enabled"'))
+    end
+end)
+
 -- Move focus with mainMod + arrow keys
 
 hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))

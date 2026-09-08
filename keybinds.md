@@ -33,3 +33,4 @@
 ## Shell
 - SUPER+L: Lock
 - SUPER+Esc: Power menu
+- SUPER+F1: Toggle power saver
