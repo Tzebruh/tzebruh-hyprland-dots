@@ -335,8 +335,16 @@ hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 -- dwindle
 
 -- bind = $mainMod, J, togglesplit, # dwindle
-hl.bind(mainMod .. " + " .. "J", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + " .. "K", hl.dsp.layout("swapsplit"))
+hl.bind(mainMod .. " + " .. "J", function()
+    if (hl.get_active_workspace().tiled_layout == "dwindle") then
+        hl.dispatch(hl.dsp.layout("togglesplit"))
+    end
+end)
+hl.bind(mainMod .. " + " .. "K", function()
+    if (hl.get_active_workspace().tiled_layout == "dwindle") then
+        hl.dispatch(hl.dsp.layout("swapsplit"))
+    end
+end)
 
 --mine
 
