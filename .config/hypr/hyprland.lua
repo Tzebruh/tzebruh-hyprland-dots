@@ -327,6 +327,20 @@ hl.window_rule({
     no_focus = true
 })
 
+hl.window_rule({
+    match = {
+	class = "org.kde.gwenview"
+    },
+    float = true
+})
+
+hl.window_rule({
+    match = {
+	class = "vlc"
+    },
+    float = true
+})
+
 -- Rules: Layer Rules
 hl.layer_rule({
     match = {
