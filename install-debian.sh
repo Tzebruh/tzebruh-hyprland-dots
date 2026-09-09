@@ -8,7 +8,7 @@ sudo apt update
 sudo apt install -t trixie-backports hyprland hyprpaper hyprlock waybar xdg-desktop-portal-hyprland pipewire pipewire-pulse hyprland-guiutils hyprshutdown
 
 # Install normal packages
-sudo apt install wofi foot nautilus dunst fonts-font-awesome pavucontrol xdg-desktop-portal-gtk gnome-themes-extra qt6ct polkit-kde-agent-1 brightnessctl wl-clipboard jq grim slurp libnotify-bin hyprpicker power-profiles-daemon
+sudo apt install wofi foot dolphin dunst fonts-font-awesome pavucontrol xdg-desktop-portal-gtk gnome-themes-extra qt6ct polkit-kde-agent-1 brightnessctl wl-clipboard jq grim slurp libnotify-bin hyprpicker power-profiles-daemon
 
 # Missing from Arch: hyprshot, ttf-dejavu-nerd
 
