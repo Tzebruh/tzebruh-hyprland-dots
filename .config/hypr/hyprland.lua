@@ -102,7 +102,7 @@ hl.config({
 
 hl.config({
     master = {
-        new_status = "master",
+        new_status = "slave",
     },
 })
 
