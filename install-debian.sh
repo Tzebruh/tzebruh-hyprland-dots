@@ -17,7 +17,7 @@ cp -a ./.config/. ~/.config/
 cp -a ./.local/bin/. ~/.local/bin/
 cp ./foot-debian.ini ~/.config/foot/foot.ini
 sudo ln -s /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 /usr/lib/polkit-kde-authentication-agent-1
-xdg-mime default org.gnome.Nautilus.desktop inode/directory
+xdg-mime default org.gnome.dolphin.desktop inode/directory
 
 # Manual install of hyprshot
 sudo wget -O /usr/bin/hyprshot https://raw.githubusercontent.com/Gustash/Hyprshot/refs/heads/main/hyprshot
