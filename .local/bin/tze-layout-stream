@@ -1,0 +1,17 @@
+#!/bin/bash
+# Disclaimer: AI did basically write this script because I have no idea how sockets work. Sorry AI haters
+
+trap 'pkill -P $$ 2>/dev/null; exit 0' EXIT INT TERM
+
+hyprctl activeworkspace -j | jq -r '.tiledLayout'
+
+SOCK="$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"
+
+socat -U - "UNIX-CONNECT:$SOCK" | while read -r line; do
+	case "$line" in
+		workspace*|focusedmon*|activewindow*|changefloatingmode*)
+			LAYOUT=$(hyprctl activeworkspace -j | jq -r '.tiledLayout' 2>/dev/null)
+			echo "${LAYOUT:-dwindle}"
+			;;
+	esac
+done
