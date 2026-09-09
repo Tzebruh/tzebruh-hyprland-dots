@@ -132,7 +132,7 @@ local mainMod = "SUPER"
 -- Keybinds: Programs
 hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd Font Mono:size=16"'))
 
-hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("dolphin --new-window"))
+hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
 hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("xdg-open \"http://\""))
 
