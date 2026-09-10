@@ -148,6 +148,8 @@ hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 
+hl.bind("ALT + tab", hl.dsp.window.cycle_next())
+
 -- ..: Window Movement
 hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))
 

@@ -14,6 +14,7 @@
 - SUPER+P: Toggle pseudotile
 ### Window Movement
 - SUPER+Arrows: Change focused window
+- ALT+Tab: Cycle focused window
 - SUPER+Shift+Arrows: Move focused window
 - SUPER+J: Toggle split
 - SUPER+K: Swap split
