@@ -168,6 +168,16 @@ hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "up", hl.dsp.window.move({ direc
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "down", hl.dsp.window.move({ direction = "down" }))
 
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "return", hl.dsp.window.center())
+
+hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "left", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+
+hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "right", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+
+hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "up", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
+
+hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "down", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
+
 hl.bind(mainMod .. " + " .. "J", function()
     if (hl.get_active_workspace().tiled_layout == "dwindle") then
         hl.dispatch(hl.dsp.layout("togglesplit"))

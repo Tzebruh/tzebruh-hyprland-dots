@@ -17,6 +17,8 @@
 - ALT+Tab: Cycle focused window
 - ALT+SHIFT+Tab: Cycle focused window backwards
 - SUPER+Shift+Arrows: Move focused window
+- SUPER+Shift+Enter: Center focused floating window
+- SUPER+Ctrl+Arrows: Resize focused window (best on floating windows)
 - SUPER+J: Toggle split
 - SUPER+K: Swap split
 - SUPER+Left click: Drag window
