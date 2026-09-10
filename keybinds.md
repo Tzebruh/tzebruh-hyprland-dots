@@ -15,6 +15,7 @@
 ### Window Movement
 - SUPER+Arrows: Change focused window
 - ALT+Tab: Cycle focused window
+- ALT+SHIFT+Tab: Cycle focused window backwards
 - SUPER+Shift+Arrows: Move focused window
 - SUPER+J: Toggle split
 - SUPER+K: Swap split

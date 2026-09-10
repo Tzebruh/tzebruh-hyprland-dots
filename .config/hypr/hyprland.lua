@@ -148,8 +148,6 @@ hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 
-hl.bind("ALT + tab", hl.dsp.window.cycle_next())
-
 -- ..: Window Movement
 hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))
 
@@ -158,6 +156,9 @@ hl.bind(mainMod .. " + " .. "right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + " .. "up", hl.dsp.focus({ direction = "up" }))
 
 hl.bind(mainMod .. " + " .. "down", hl.dsp.focus({ direction = "down" }))
+
+hl.bind("ALT + tab", hl.dsp.window.cycle_next())
+hl.bind("ALT + SHIFT + tab", hl.dsp.window.cycle_next({ next = false }))
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "left", hl.dsp.window.move({ direction = "left" }))
 
