@@ -3,7 +3,7 @@
 ## Programs
 - SUPER+Q: Launch Foot (terminal)
 - SUPER+E: Launch Nautilus (file manager)
-- SUPER+B: Launch Browser (based on the default in XDG)
+- SUPER+W: Launch Browser (based on the default in XDG)
 - SUPER+R: Launch Wofi (application launcher)
 
 ## Window Management

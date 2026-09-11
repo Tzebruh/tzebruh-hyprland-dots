@@ -134,7 +134,7 @@ hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
-hl.bind(mainMod .. " + " .. "B", hl.dsp.exec_cmd("xdg-open \"http://\""))
+hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("xdg-open \"http://\""))
 
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program' --insensitive"))
 
