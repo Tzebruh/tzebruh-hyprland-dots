@@ -144,6 +144,8 @@ hl.bind(mainMod .. " + " .. "C", hl.dsp.window.close())
 
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
 
+hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "F", hl.dsp.window.fullscreen({ mode = "maximized" }))
+
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
@@ -356,6 +358,13 @@ hl.window_rule({
 	class = "vlc"
     },
     float = true
+})
+
+hl.window_rule({
+    match = {
+        fullscreen = true
+    },
+    border_color = "rgb(FF00FF)"
 })
 
 -- Rules: Layer Rules

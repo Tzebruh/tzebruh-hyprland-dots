@@ -10,6 +10,7 @@
 ### Basic
 - SUPER+C: Close window
 - SUPER+F: Fullscreen window
+- SUPER+SHIFT+F: Maximize window (border color will become magenta to indicate)
 - SUPER+V: Toggle floating
 - SUPER+P: Toggle pseudotile
 ### Window Movement
