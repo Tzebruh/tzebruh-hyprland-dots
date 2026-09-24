@@ -3,10 +3,10 @@
 
 -- Monitors
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1,
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = 1,
 })
 
 -- Environment Variables
@@ -17,113 +17,113 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 -- Config
 hl.config({
-    general = {
-        gaps_in = 5,
-        gaps_out = 20,
-        border_size = 3,
-        resize_on_border = false,
-        allow_tearing = false,
-        layout = "dwindle",
-        col = {
-            active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-            inactive_border = "rgba(808080e6)",
-        },
-    },
+	general = {
+		gaps_in = 5,
+		gaps_out = 20,
+		border_size = 3,
+		resize_on_border = false,
+		allow_tearing = false,
+		layout = "dwindle",
+		col = {
+			active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+			inactive_border = "rgba(808080e6)",
+		},
+	},
 })
 
 hl.config({
-    decoration = {
-        rounding = 7,
-        rounding_power = 2,
-        active_opacity = 0.9,
-        inactive_opacity = 0.9,
-        shadow = {
-            enabled = true,
-            range = 4,
-            render_power = 3,
-            color = "rgba(1a1a1aee)",
-        },
-        blur = {
-            enabled = true,
-            size = 3,
-            passes = 1,
-            vibrancy = 0.1696,
-        },
-    },
+	decoration = {
+		rounding = 7,
+		rounding_power = 2,
+		active_opacity = 0.9,
+		inactive_opacity = 0.9,
+		shadow = {
+			enabled = true,
+			range = 4,
+			render_power = 3,
+			color = "rgba(1a1a1aee)",
+		},
+		blur = {
+			enabled = true,
+			size = 3,
+			passes = 1,
+			vibrancy = 0.1696,
+		},
+	},
 })
 
 hl.config({
-    animations = {
-        enabled = true,
-    },
+	animations = {
+		enabled = true,
+	},
 })
 
 hl.config({
-    cursor = {
-        no_hardware_cursors = false,
-    },
+	cursor = {
+		no_hardware_cursors = false,
+	},
 })
 
 -- Curves
-hl.curve("easeOutQuint",     { type = "bezier", points = { {0.23, 1},    {0.32, 1} } })
-hl.curve("easeInOutCubic",   { type = "bezier", points = { {0.65, 0.05}, {0.36, 1} } })
-hl.curve("linear",           { type = "bezier", points = { {0, 0},       {1, 1} } })
-hl.curve("almostLinear",     { type = "bezier", points = { {0.5, 0.5},   {0.75, 1.0} } })
-hl.curve("quick",            { type = "bezier", points = { {0.15, 0},    {0.1, 1} } })
-hl.curve("easeOutBack",      { type = "bezier", points = { {0.34, 1.56}, {0.64, 1} } })
-hl.curve("easeOutBackLess",  { type = "bezier", points = { {0.34, 1.2},  {0.4, 1} } })
+hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
+hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })
+hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
+hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1.0 } } })
+hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
+hl.curve("easeOutBack", { type = "bezier", points = { { 0.34, 1.56 }, { 0.64, 1 } } })
+hl.curve("easeOutBackLess", { type = "bezier", points = { { 0.34, 1.2 }, { 0.4, 1 } } })
 
 -- Animations
-hl.animation({ leaf = "global",         enabled = true, speed = 10,   bezier = "default" })
-hl.animation({ leaf = "border",         enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",        enabled = true, speed = 4.79, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windowsIn",      enabled = true, speed = 4.1,  bezier = "easeOutBackLess" }) -- mine
-hl.animation({ leaf = "windowsOut",     enabled = true, speed = 1.49, bezier = "linear",       style = "popin 87%" })
-hl.animation({ leaf = "windowsMove",    enabled = true, speed = 4.1,  bezier = "easeOutBackLess" }) -- mine
-hl.animation({ leaf = "fadeIn",         enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut",        enabled = true, speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade",           enabled = true, speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers",         enabled = true, speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",       enabled = true, speed = 4,    bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut",      enabled = true, speed = 1.5,  bezier = "linear",       style = "fade" })
-hl.animation({ leaf = "fadeLayersIn",   enabled = true, speed = 1.79, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeLayersOut",  enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",     enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",   enabled = true, speed = 4,    bezier = "easeOutQuint" })
-hl.animation({ leaf = "workspacesOut",  enabled = true, speed = 4,    bezier = "easeOutQuint" })
+hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
+hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "easeOutBackLess" }) -- mine
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 4.1, bezier = "easeOutBackLess" }) -- mine
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
+hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
+hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspacesIn", enabled = true, speed = 4, bezier = "easeOutQuint" })
+hl.animation({ leaf = "workspacesOut", enabled = true, speed = 4, bezier = "easeOutQuint" })
 hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 4, bezier = "easeOutQuint", style = "slidevert" })
 
 -- Layout config
 hl.config({
-    dwindle = {
-        preserve_split = true,
-    },
+	dwindle = {
+		preserve_split = true,
+	},
 })
 
 hl.config({
-    master = {
-        new_status = "slave",
-    },
+	master = {
+		new_status = "slave",
+	},
 })
 
 -- Misc config
 hl.config({
-    misc = {
-        force_default_wallpaper = -1,
-        disable_hyprland_logo = true,
-    },
+	misc = {
+		force_default_wallpaper = -1,
+		disable_hyprland_logo = true,
+	},
 })
 
 -- Input
 hl.config({
-    input = {
-        kb_layout = "us",
-        follow_mouse = 1,
-        sensitivity = 0,
-        touchpad = {
-            natural_scroll = true,
-        },
-    },
+	input = {
+		kb_layout = "us",
+		follow_mouse = 1,
+		sensitivity = 0,
+		touchpad = {
+			natural_scroll = true,
+		},
+	},
 })
 
 -- KEYBINDS
@@ -134,9 +134,12 @@ hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd('foot -o font="DejaVuSansM Nerd
 
 hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("nautilus -w"))
 
-hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("xdg-open \"http://\""))
+hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd('xdg-open "http://"'))
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program' --insensitive"))
+hl.bind(
+	mainMod .. " + " .. "R",
+	hl.dsp.exec_cmd("wofi --show drun --allow-images --prompt 'Launch Program' --insensitive")
+)
 
 -- Keybinds: Window Management
 -- ..: Basic
@@ -181,14 +184,14 @@ hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "up", hl.dsp.window.resize({ x = 
 hl.bind(mainMod .. " + " .. "CTRL" .. " + " .. "down", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
 
 hl.bind(mainMod .. " + " .. "J", function()
-    if (hl.get_active_workspace().tiled_layout == "dwindle") then
-        hl.dispatch(hl.dsp.layout("togglesplit"))
-    end
+	if hl.get_active_workspace().tiled_layout == "dwindle" then
+		hl.dispatch(hl.dsp.layout("togglesplit"))
+	end
 end)
 hl.bind(mainMod .. " + " .. "K", function()
-    if (hl.get_active_workspace().tiled_layout == "dwindle") then
-        hl.dispatch(hl.dsp.layout("swapsplit"))
-    end
+	if hl.get_active_workspace().tiled_layout == "dwindle" then
+		hl.dispatch(hl.dsp.layout("swapsplit"))
+	end
 end)
 
 hl.bind(mainMod .. " + " .. "mouse:272", hl.dsp.window.drag(), { mouse = true })
@@ -242,25 +245,28 @@ hl.bind(mainMod .. " + " .. "mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + " .. "mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 local next_layout = {
-    ["dwindle"] = "master",
-    ["master"] = "scrolling",
-    ["scrolling"] = "dwindle"
+	["dwindle"] = "master",
+	["master"] = "scrolling",
+	["scrolling"] = "dwindle",
 }
 hl.bind(mainMod .. " + " .. "tab", function()
-    local ws = hl.get_active_workspace()
-    local new_layout = next_layout[ws.tiled_layout]
-    hl.workspace_rule({
-	workspace = tostring(ws.id),
-	layout = new_layout
-    })
-    hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2595 -t 2000 "Layout changed" "Workspace ' .. ws.id .. ' layout set to ' .. new_layout .. '"'))
+	local ws = hl.get_active_workspace()
+	local new_layout = next_layout[ws.tiled_layout]
+	hl.workspace_rule({
+		workspace = tostring(ws.id),
+		layout = new_layout,
+	})
+	hl.dispatch(
+		hl.dsp.exec_cmd(
+			'dunstify -r 2595 -t 2000 "Layout changed" "Workspace ' .. ws.id .. " layout set to " .. new_layout .. '"'
+		)
+	)
 end)
 
 -- ..: Special
 hl.bind(mainMod .. " + " .. "S", hl.dsp.workspace.toggle_special("magic"))
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "S", hl.dsp.window.move({ workspace = "special:magic" }))
-
 
 -- Keybinds: Shell
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -z -m region --clipboard-only"))
@@ -270,51 +276,71 @@ hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + " .. "ESCAPE", hl.dsp.exec_cmd("~/.local/bin/tze-power-menu"))
 
 hl.bind(mainMod .. " + " .. "F1", function()
-    local power_saver = (hl.get_config("animations.enabled") == false)
+	local power_saver = (hl.get_config("animations.enabled") == false)
 
-    if power_saver then
-	hl.config({
-	    animations = { enabled = true },
-	    decoration = {
-		active_opacity = 0.9,
-		inactive_opacity = 0.9,
-		shadow = { enabled = true },
-		blur = { enabled = true }
-	    }
-	})
+	if power_saver then
+		hl.config({
+			animations = { enabled = true },
+			decoration = {
+				active_opacity = 0.9,
+				inactive_opacity = 0.9,
+				shadow = { enabled = true },
+				blur = { enabled = true },
+			},
+		})
 
-	hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set performance"))
+		hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set performance"))
 
-        hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver disabled"'))
-    else
-	hl.config({
-	    animations = { enabled = false },
-	    decoration = {
-		active_opacity = 1.0,
-		inactive_opacity = 1.0,
-		shadow = { enabled = false },
-		blur = { enabled = false }
-	    }
-	})
+		hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver disabled"'))
+	else
+		hl.config({
+			animations = { enabled = false },
+			decoration = {
+				active_opacity = 1.0,
+				inactive_opacity = 1.0,
+				shadow = { enabled = false },
+				blur = { enabled = false },
+			},
+		})
 
-	hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set power-saver"))
+		hl.dispatch(hl.dsp.exec_cmd("powerprofilesctl set power-saver"))
 
-        hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver enabled"'))
-    end
+		hl.dispatch(hl.dsp.exec_cmd('dunstify -r 2596 -t 2000 "Power saver enabled"'))
+	end
 end)
 
 -- Keybinds: Other
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+; ~/.local/bin/tze-volume-notif"), { locked = true })
+hl.bind(
+	"XF86AudioRaiseVolume",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+; ~/.local/bin/tze-volume-notif"),
+	{ locked = true }
+)
 
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; ~/.local/bin/tze-volume-notif"), { locked = true })
+hl.bind(
+	"XF86AudioLowerVolume",
+	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; ~/.local/bin/tze-volume-notif"),
+	{ locked = true }
+)
 
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; ~/.local/bin/tze-volume-notif"), { locked = true })
+hl.bind(
+	"XF86AudioMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; ~/.local/bin/tze-volume-notif"),
+	{ locked = true }
+)
 
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true })
 
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+; ~/.local/bin/tze-brightness-notif"), { locked = true })
+hl.bind(
+	"XF86MonBrightnessUp",
+	hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+; ~/.local/bin/tze-brightness-notif"),
+	{ locked = true }
+)
 
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-; ~/.local/bin/tze-brightness-notif"), { locked = true })
+hl.bind(
+	"XF86MonBrightnessDown",
+	hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-; ~/.local/bin/tze-brightness-notif"),
+	{ locked = true }
+)
 
 -- Requires playerctl
 
@@ -329,82 +355,84 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- RULES
 -- Rules: Window Rules
 hl.window_rule({
-    name  = "suppress_maximize",
-    match = {
-        class = ".*",
-    },
-    suppress_event = "maximize"
+	name = "suppress_maximize",
+	match = {
+		class = ".*",
+	},
+	suppress_event = "maximize",
 })
 
 hl.window_rule({
-    name  = "xwayland_drag_fix",
-    match = {
-        class = "^$",
-        title = "^$",
-        xwayland = 1,
-    },
-    no_focus = true
+	name = "xwayland_drag_fix",
+	match = {
+		class = "^$",
+		title = "^$",
+		xwayland = 1,
+	},
+	no_focus = true,
 })
 
 hl.window_rule({
-    match = {
-	class = "org.kde.gwenview"
-    },
-    float = true
+	match = {
+		class = "org.kde.gwenview",
+	},
+	float = true,
 })
 
 hl.window_rule({
-    match = {
-	class = "vlc"
-    },
-    float = true
+	match = {
+		class = "vlc",
+	},
+	float = true,
 })
 
 hl.window_rule({
-    match = {
-        fullscreen = true
-    },
-    border_color = "rgb(FF00FF)"
+	match = {
+		fullscreen = true,
+	},
+	border_color = "rgb(FF00FF)",
 })
 
 -- Rules: Layer Rules
 hl.layer_rule({
-    match = {
-	namespace = "notifications"
-    },
-    blur = true,
-    above_lock = 1,
-    animation = "slide right"
+	match = {
+		namespace = "notifications",
+	},
+	blur = true,
+	above_lock = 1,
+	animation = "slide right",
 })
 
 hl.layer_rule({
-    match = {
-	namespace = "wofi"
-    },
-    blur = true,
-    dim_around = true,
-    animation = "popin 70%"
+	match = {
+		namespace = "wofi",
+	},
+	blur = true,
+	dim_around = true,
+	animation = "popin 70%",
 })
 
 hl.layer_rule({
-    match = {
-	namespace = "waybar"
-    },
-    blur = true
+	match = {
+		namespace = "waybar",
+	},
+	blur = true,
 })
 
 hl.layer_rule({
-    match = {
-	namespace = "hyprshutdown"
-    },
-    blur = true
+	match = {
+		namespace = "hyprshutdown",
+	},
+	blur = true,
 })
 
 -- Start/reload events
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar & hyprpaper & dunst & /usr/lib/polkit-kde-authentication-agent-1 &")
+	hl.exec_cmd("waybar & hyprpaper & dunst & /usr/lib/polkit-kde-authentication-agent-1 &")
 end)
 
 hl.on("config.reloaded", function()
-    hl.exec_cmd('gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" & gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" & powerprofilesctl set performance')
+	hl.exec_cmd(
+		'gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" & gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" & powerprofilesctl set performance'
+	)
 end)
