@@ -35,8 +35,8 @@ hl.config({
 	decoration = {
 		rounding = 7,
 		rounding_power = 2,
-		active_opacity = 0.9,
-		inactive_opacity = 0.9,
+		active_opacity = 0.85,
+		inactive_opacity = 0.85,
 		shadow = {
 			enabled = true,
 			range = 4,
@@ -282,8 +282,8 @@ hl.bind(mainMod .. " + " .. "F1", function()
 		hl.config({
 			animations = { enabled = true },
 			decoration = {
-				active_opacity = 0.9,
-				inactive_opacity = 0.9,
+				active_opacity = 0.85,
+				inactive_opacity = 0.85,
 				shadow = { enabled = true },
 				blur = { enabled = true },
 			},
@@ -377,6 +377,7 @@ hl.window_rule({
 		class = "org.kde.gwenview",
 	},
 	float = true,
+	opaque = true,
 })
 
 hl.window_rule({
@@ -384,6 +385,7 @@ hl.window_rule({
 		class = "vlc",
 	},
 	float = true,
+	opaque = true,
 })
 
 hl.window_rule({
@@ -392,6 +394,10 @@ hl.window_rule({
 	},
 	border_color = "rgb(FF00FF)",
 })
+
+hl.window_rule({ match = { content = "photo" }, opaque = true })
+hl.window_rule({ match = { content = "video" }, opaque = true })
+hl.window_rule({ match = { content = "game" }, opaque = true })
 
 -- Rules: Layer Rules
 hl.layer_rule({
