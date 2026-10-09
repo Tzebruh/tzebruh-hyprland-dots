@@ -153,6 +153,8 @@ hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 
+hl.bind(mainMod .. " + " .. "T", hl.dsp.window.pin())
+
 -- ..: Window Movement
 hl.bind(mainMod .. " + " .. "left", hl.dsp.focus({ direction = "left" }))
 
@@ -393,6 +395,14 @@ hl.window_rule({
 		fullscreen = true,
 	},
 	border_color = "rgb(FF00FF)",
+})
+
+hl.window_rule({
+	match = {
+		pin = true,
+		float = true,
+	},
+	border_color = "rgb(FF0000)",
 })
 
 hl.window_rule({ match = { content = "photo" }, opaque = true })

@@ -13,6 +13,7 @@
 - SUPER+SHIFT+F: Maximize window (border color will become magenta to indicate)
 - SUPER+V: Toggle floating
 - SUPER+P: Toggle pseudotile
+- SUPER+T: Toggle pin (always on top)
 ### Window Movement
 - SUPER+Arrows: Change focused window
 - ALT+Tab: Cycle focused window
